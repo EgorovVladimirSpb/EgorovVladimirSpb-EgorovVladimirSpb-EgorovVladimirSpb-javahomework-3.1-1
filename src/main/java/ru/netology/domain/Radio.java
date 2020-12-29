@@ -7,6 +7,8 @@ public class Radio {
     private int minStationNumber = 0;
     private int currentVolumeLevel;
     private int maxVolumeLevel = 10;
+
+
     private int minVolumeLevel = 0;
 
     public int getCurrentStationNumber() {
@@ -28,15 +30,17 @@ public class Radio {
     public void increaseStationNumber() {
         if (currentStationNumber == maxStationNumber) {
             currentStationNumber = minStationNumber;
-            return; }
+            return;
+        }
         currentStationNumber++;
     }
 
     public void decreaseStationNumber() {
         if (currentStationNumber == minStationNumber) {
-        currentStationNumber = maxStationNumber;
-        return; }
-    currentStationNumber --;
+            currentStationNumber = maxStationNumber;
+            return;
+        }
+        currentStationNumber--;
     }
 
     public int getCurrentVolumeLevel() {
@@ -65,6 +69,38 @@ public class Radio {
         if (currentVolumeLevel > minVolumeLevel) {
             currentVolumeLevel--;
         }
+    }
+
+    public int getMaxStationNumber() {
+        return maxStationNumber;
+    }
+
+    public void setMaxStationNumber(int maxStationNumber) {
+        this.maxStationNumber = maxStationNumber;
+    }
+
+    public int getMinStationNumber() {
+        return minStationNumber;
+    }
+
+    public void setMinStationNumber(int minStationNumber) {
+        this.minStationNumber = minStationNumber;
+    }
+
+    public int getMaxVolumeLevel() {
+        return maxVolumeLevel;
+    }
+
+    public void setMaxVolumeLevel(int maxVolumeLevel) {
+        this.maxVolumeLevel = maxVolumeLevel;
+    }
+
+    public int getMinVolumeLevel() {
+        return minVolumeLevel;
+    }
+
+    public void setMinVolumeLevel(int minVolumeLevel) {
+        this.minVolumeLevel = minVolumeLevel;
     }
 
 }
