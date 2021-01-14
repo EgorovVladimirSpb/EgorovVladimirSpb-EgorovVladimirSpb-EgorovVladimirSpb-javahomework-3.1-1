@@ -150,7 +150,7 @@ public class RadioTest {
         Radio radio = new Radio();
         radio.setCurrentStationNumber(-10);
         radio.decreaseStationNumber();
-        int expected = 9;
+        int expected = 0;
 
         assertEquals(expected, radio.getCurrentStationNumber());
 
