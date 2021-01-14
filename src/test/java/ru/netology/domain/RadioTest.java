@@ -83,17 +83,6 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldDecreaseStationNumberUnderMinNewMax() {
-        Radio radio = new Radio(20);
-        radio.setCurrentStationNumber(-10);
-        radio.decreaseStationNumber();
-        int expected = 20;
-
-        assertEquals(expected, radio.getCurrentStationNumber());
-
-    }
-
-    @Test
     public void shouldChoseStationNumber() {
         Radio radio = new Radio();
         radio.setCurrentStationNumber(2);
@@ -149,17 +138,6 @@ public class RadioTest {
     public void shouldDecreaseStationNumberMin() {
         Radio radio = new Radio();
         radio.setCurrentStationNumber(0);
-        radio.decreaseStationNumber();
-        int expected = 10;
-
-        assertEquals(expected, radio.getCurrentStationNumber());
-
-    }
-
-    @Test
-    public void shouldDecreaseStationNumberUnderMin() {
-        Radio radio = new Radio();
-        radio.setCurrentStationNumber(-10);
         radio.decreaseStationNumber();
         int expected = 10;
 
